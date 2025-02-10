@@ -5,13 +5,26 @@ function Object (props) {
     const [diffX, setDiffX] = useState(0);
     const [diffY, setDiffY] = useState(0);
 
-    console.log(props);
+    const {id} = props;
     const {style} = props;
     const {setRotation} = props;
 
-    const doRotation = () => {
-        setRotation(prevRotation => prevRotation + 45)
+    const doRotation = (event) => {
+        console.log("in doRotation")
+        //could do cook something with this
+        event.target.style.transform = "rotate(45deg)";
+        // setRotation(prevRotation => prevRotation + 45)
+        // if(id === 'triangle') {
+        //
+        //
+        //     setRotation(r => ({...r, triangle: r.triangle + 45}))
+        //
+        // }
+        // else if (id === 'square'){
+        //     setRotation(r => ({...r, square: r.square + 45}));
+        // }
     }
+
 
     function grabber(event) {
 
